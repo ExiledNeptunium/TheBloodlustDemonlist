@@ -1,0 +1,36 @@
+{
+    "id": 26681070,
+    "name": "Sonic Wave",
+    "author": "Sunix",
+    "creators": ["Cyclic"],
+    "verifier": "Noctal",
+    "verification": "https://www.youtube.com/watch?v=SEahGS6ca9M",
+    "percentToQualify": "65",
+    "password": "112516",
+    "records": [
+        {
+            "user": "RREV",
+            "link": "https://www.youtube.com/watch?v=FZy0inorj04",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ExiledNeptunium",
+            "link": "https://www.youtube.com/watch?v=rx8RacQJmAs",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "PanicGMD",
+            "link": "https://www.youtube.com/watch?v=mEl4jhYiYlk",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "iiLogan",
+            "link": "https://www.youtube.com/watch?v=lJx0B-aVWOM",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
