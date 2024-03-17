@@ -8,5 +8,9 @@
     "percentToQualify": "54",
     "password": "No Copy",
     "records": [
-    ]
-}
+        {
+            "user": "tux",
+            "link": "https://www.youtube.com/watch?v=kXfP-zDQeis",
+            "percent": 100,
+            "hz": 240
+        },
