@@ -8,5 +8,11 @@
     "percentToQualify": "64",
     "password": "060521",
     "records": [
+        {
+            "user": "Mariner",
+            "link": "https://www.youtube.com/watch?v=J57GlLpUbRg",
+            "percent": 100,
+            "hz": 288
+        }
     ]
 }
