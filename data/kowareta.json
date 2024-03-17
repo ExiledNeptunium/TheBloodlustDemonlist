@@ -8,7 +8,11 @@
     "percentToQualify": "65",
     "password": "474969",
     "records": [
-      {
-      },
+        {
+            "user": "Smasher",
+            "link": "https://www.youtube.com/watch?v=zWaL-veNr8Q",
+            "percent": 100,
+            "hz": 360
+        },
     ]
 }
