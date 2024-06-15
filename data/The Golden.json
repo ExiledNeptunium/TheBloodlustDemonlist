@@ -5,7 +5,7 @@
     "creators": ["nSwish"],
     "verifier": "Noctal",
     "verification": "https://www.youtube.com/watch?v=7tK18bczAAM",
-    "percentToQualify": "50",
+    "percentToQualify": "100",
     "password": "886988",
     "records": [
     ]
