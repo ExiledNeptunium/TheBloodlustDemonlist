@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "356987",
     "records": [
+        {
+            "user": "Noctal",
+            "link": "https://www.youtube.com/watch?v=DfcBThDHNik",
+            "percent": 100,
+            "hz": 999
+        }
     ]
 }
