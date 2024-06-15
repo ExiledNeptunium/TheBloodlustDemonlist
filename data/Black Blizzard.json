@@ -1,0 +1,24 @@
+{
+    "id": 34057654,
+    "name": "Black Blizzard",
+    "author": "KrmaL",
+    "creators": ["KrmaL"],
+    "verifier": "Smasher",
+    "verification": "https://www.youtube.com/watch?v=ddkIe5tZKvw",
+    "percentToQualify": "100",
+    "password": "000006",
+    "records": [
+        {
+            "user": "ExiledNeptunium",
+            "link": "https://www.youtube.com/watch?v=CwiQ2v5v2A8",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Noctal",
+            "link": "https://www.youtube.com/watch?v=8MlGU7xIcag",
+            "percent": 100,
+            "hz": 999
+        }
+    ]
+}
