@@ -18,23 +18,18 @@ export function score(rank, percent, minPercent) {
         return 0;
     }
 
-    // Old formula
-    /*
-    let score = (100 / Math.sqrt((rank - 1) / 50 + 0.444444) - 50) *
-        ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
-    */
-    // New formula
-    let score = (-24.9975*Math.pow(rank-1, 0.4) + 250) *
+    let score = 250 * Math.exp(-(Math.log(250 / 25) / 149) * (rank - 1)) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
 
     score = Math.max(0, score);
 
     if (percent != 100) {
-        return round(score - score / 3);
+        return Math.round(score - score / 3);
     }
 
-    return Math.max(round(score), 0);
+    return Math.max(Math.round(score), 0);
 }
+
 
 export function round(num) {
     if (!('' + num).includes('e')) {
