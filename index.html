@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=1024" />
-        <title>The Bloodlust Demonlist</title>
+        <title>Unluckiest Levels List</title>
 
         <!-- Replace your server icon by uploading an image file named "list_icon.png"-->
-        <link rel="icon" href="/list_icon.png" />
+        <link rel="icon" href="/list_icon.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="/css/typography.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/packs.css" />
         <link
             rel="stylesheet"
             type="text/css"
@@ -37,7 +38,7 @@
     <body id="app">
         <header :class="{ dark: store.dark }">
             <div class="logo">
-                <h2>TBLD</h2>
+                <h2>ULL</h2>
                 <p>v1.0.0</p>
             </div>
             <nav class="nav">
@@ -47,8 +48,8 @@
                 <router-link class="nav__tab" to="/leaderboard">
                     <span class="type-label-lg">Leaderboard</span>
                 </router-link>
-                <router-link class="nav__tab" to="/roulette">
-                    <span class="type-label-lg">Roulette</span>
+                <router-link class="nav__tab" to="/packs">
+                    <span class="type-label-lg">Packs</span>
                 </router-link>
                 <div class="nav__actions">
                     <button
@@ -60,17 +61,26 @@
                             alt=""
                         />
                     </button>
-                    <!-- Replace the '#' with your discord server's invite-->
-                    <a class="nav__icon" href="https://discord.com/invite/5TXb6E2WkN">
-                        <img src="/assets/discord.svg" alt="Discord Logo" />
-                    </a>
                     <!-- List record submission form, add a link to replace the '#' when putting a link to your list submission form-->
                     <a
                         class="nav__cta type-label-lg"
-                        href="https://forms.gle/JWbJ7AfgHdpH3Cx86"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeEI7CmCpAC-xJdJYJ334xmsHvfAZAE-PZq674U6v8K55_BEA/viewform?usp=dialog"
                         target="_blank"
-                        >Submit a Record</a
+                        >Submit Record</a
                     >
+                    <a
+                        class="nav__cta type-label-lg"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeu2CG-VKUy45LVSChTlIjDK9IC9xYdfbrtDKwgz75WBhSTBw/viewform?usp=dialog"
+                        target="_blank"
+                        >Submit Verification</a
+                    >
+                    <a
+                        class="nav__icon discord-icon"
+                        href="https://discord.gg/zuNvWzn9RB"
+                        target="_blank"
+                    >
+                        <img src="/assets/discord.svg" alt="Discord" class="discord-img" />
+                    </a>
                 </div>
             </nav>
         </header>
