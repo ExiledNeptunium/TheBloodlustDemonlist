@@ -21,6 +21,8 @@ export const levelPacks = [
   }
 ];
 
+import list from './_list.json';
+
 /**
  * Calculate the score awarded when having a certain percentage on a list level
  * @param {Number} rank Position on the list
@@ -38,16 +40,28 @@ export function score(rank, percent, minPercent, levelName, beatenLevels) {
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     score = Math.max(0, score);
 
-    // Bonus for completed packs
+    let packBonus = 0;
     for (const pack of levelPacks) {
         if (pack.levels.includes(levelName)) {
             const completed = pack.levels.every(name => beatenLevels.has(name));
             if (completed) {
-                score += 162350; // arbitrary bonus for completing the pack
+                let total = 0;
+                let count = 0;
+                for (const lvl of pack.levels) {
+                    const listLevel = list.levels.find(l => l.name === lvl);
+                    if (listLevel) {
+                        const packScore = 250 * Math.exp(-(Math.log(250 / 25) / 80) * (listLevel.rank - 1));
+                        total += packScore;
+                        count++;
+                    }
+                }
+                if (count > 0) packBonus += total / count;
                 break;
             }
         }
     }
+
+    score += packBonus;
 
     if (percent !== 100) {
         return round(score - score / 3);
