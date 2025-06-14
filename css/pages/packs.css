@@ -1,0 +1,118 @@
+.page-packs-container {
+    display: block;
+    height: auto;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+
+.page-packs {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.packs-scroll {
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-top: 2rem;
+    padding-inline: 2rem;
+    padding-bottom: 1rem;
+    scrollbar-gutter: stable;
+}
+
+.packs-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.packs-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.packs-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 4px;
+}
+
+.pack-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.pack-section h2 {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+    margin-left: calc((100% - 1000px) / 2);
+    padding-left: 0.25rem;
+}
+
+.pack-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+
+    place-content: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pack-level {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border: 2px solid var(--color-primary);
+}
+
+.pack-level:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+.pack-level h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pack-level p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.pack-level a {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.pack-level a:hover {
+    color: #339aff;
+}
+
+.clickable-title {
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+}
+
+.clickable-title:hover {
+    text-decoration: underline;
+    color: var(--background);
+}
+
+.highlight {
+    outline: 2px solid var(--color-primary);
+    border-radius: 0.5rem;
+}
