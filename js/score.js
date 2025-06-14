@@ -43,7 +43,7 @@ export function score(rank, percent, minPercent, levelName, beatenLevels) {
         if (pack.levels.includes(levelName)) {
             const completed = pack.levels.every(name => beatenLevels.has(name));
             if (completed) {
-                score += 10; // arbitrary bonus for completing the pack
+                score += 162350; // arbitrary bonus for completing the pack
                 break;
             }
         }
