@@ -18,16 +18,16 @@ export function score(rank, percent, minPercent) {
         return 0;
     }
 
-    let score = 250 * Math.exp(-(Math.log(250 / 25) / 80) * (rank - 1)) *
+    let score = 250 * Math.exp(-(Math.log(250 / 10) / 80) * (rank - 1)) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
 
     score = Math.max(0, score);
 
     if (percent != 100) {
-        return Math.round(score - score / 3);
+        return round(score - score / 3);
     }
 
-    return Math.max(Math.round(score), 0);
+    return Math.max(round(score), 0);
 }
 
 
