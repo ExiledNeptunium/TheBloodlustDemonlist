@@ -24,16 +24,25 @@ export function score(rank, percent, minPercent) {
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     */
     // New formula
-    let score = (-24.9975*Math.pow(rank-1, 0.4) + 250) *
-        ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+function calculateScore(rank, percent, minPercent) {
+    // New scoring curve: Top 1 = 250 pts, Bottom level ~= 25 pts
+    const maxPoints = 250;
+    const minPoints = 25;
+    const maxRank = 150; // Adjust to match your list size
 
+    // Use a new exponential decay function
+    const decayRate = Math.log(maxPoints / minPoints) / (maxRank - 1);
+    const baseScore = maxPoints * Math.exp(-decayRate * (rank - 1));
+
+    // Apply percent-based modifier
+    let score = baseScore * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     score = Math.max(0, score);
 
-    if (percent != 100) {
-        return round(score - score / 3);
+    if (percent !== 100) {
+        return Math.round(score - score / 3);
     }
 
-    return Math.max(round(score), 0);
+    return Math.max(Math.round(score), 0);
 }
 
 export function round(num) {
